@@ -2,6 +2,7 @@ let all = document.querySelectorAll('div');
 let space = document.querySelector('.lower');
 let shiftLeft = document.getElementById('left');
 let shiftRight = document.getElementById('right');
+let enter = document.querySelector('.enter')
 
 function keydoard(){
     window.addEventListener('keydown', function(event){
@@ -27,6 +28,10 @@ function keydoard(){
             shiftLeft.style.backgroundColor = 'white'
             shiftRight.style.backgroundColor = 'gray'
         }
+        //Enter
+        if(event.keyCode === 13){
+            document.querySelector('input').value = ''
+        }
     });
     window.addEventListener('keyup', function(event){
         for(let i=0; i<all.length; i++){
@@ -38,3 +43,8 @@ function keydoard(){
 }
 keydoard()
 
+console.log(enter);
+
+// window.addEventListener('keydown', function(event){
+//     console.log(event)
+// })
